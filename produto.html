@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Produtos</title>
+    <link rel="stylesheet" href="css/styleProduto.css">
+    <script src="js/scriptProdutos.js" defer></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-item">
+                <img src="images/logo.png" alt="Logo" class="navbar-logo">
+            </a>
+            <a href="#" class="navbar-item" onclick="toggleCarrinho()">
+                <img src="fotos/fotos png/carrinho.png" alt="Carrinho" class="carrinho-icone">
+                <span id="carrinho-badge">0</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Container do Carrinho -->
+    <aside id="carrinho-container">
+        <h3>Seu Carrinho</h3>
+        <div class="carrinho-conteudo">
+            <ul id="carrinho-lista">
+                <!-- Produtos adicionados ao carrinho serão exibidos aqui -->
+            </ul>
+        </div>
+        <button class="btn btn-primary" onclick="finalizarCompra()">Finalizar Compra</button>
+        <button class="btn btn-secondary" onclick="toggleCarrinho()">Fechar</button>
+    </aside>
+
+    <!-- Grid de Produtos -->
+    <div class="container">
+        <!-- Primeira linha de cards -->
+        <div class="card">
+            <a href="#" class="img-wrap">
+                <img src="fotos/fotos png/memoria ram.png" alt="Memoria RAM">
+            </a>
+            <div class="info-wrap">
+                <a href="#" class="title">Memoria RAM</a><br><br>
+                <span class="price">R$ 99.99</span>
+                <div class="bottom-wrap">
+                    <button
+                        onclick="adicionarAoCarrinho('Memoria RAM', 99.99, 'fotos/fotos png/memoria ram.png')">Comprar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="#" class="img-wrap">
+                <img src="fotos/fotos png/kit fan + controladora.png" alt="Kit Fan + Controladora">
+            </a>
+            <div class="info-wrap">
+                <a href="#" class="title">Kit Fan + Controladora</a><br><br>
+                <span class="price">R$ 120.00</span>
+                <div class="bottom-wrap">
+                    <button
+                        onclick="adicionarAoCarrinho('Kit Fan + Controladora', 120.00, 'fotos/fotos png/kit fan + controladora.png')">Comprar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="#" class="img-wrap">
+                <img src="fotos/fotos png/gabinete.png" alt="Gabinete Gamer">
+            </a>
+            <div class="info-wrap">
+                <a href="#" class="title">Gabinete Gamer</a><br><br>
+                <span class="price">R$ 150.00</span>
+                <div class="bottom-wrap">
+                    <button
+                        onclick="adicionarAoCarrinho('Gabinete Gamer', 150.00 , 'fotos/fotos png/gabinete.png')">Comprar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Segunda linha de cards -->
+        <div class="card">
+            <a href="#" class="img-wrap">
+                <img src="fotos/fotos png/mousepad.png" alt="Produto 4">
+            </a>
+            <div class="info-wrap">
+                <a href="#" class="title">Mousepad</a><br><br>
+                <span class="price">R$ 19.99</span>
+                <div class="bottom-wrap">
+                    <button
+                        onclick="adicionarAoCarrinho('Mousepad', 19.99, 'fotos/fotos png/mousepad.png')">Comprar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="#" class="img-wrap">
+                <img src="fotos/fotos png/pasta termica.png" alt="Produto 5">
+            </a>
+            <div class="info-wrap">
+                <a href="#" class="title">Pasta termica</a><br><br>
+                <span class="price">R$ 30.00</span>
+                <div class="bottom-wrap">
+                    <button
+                        onclick="adicionarAoCarrinho('Pasta Termica', 30.00, 'fotos/fotos png/pasta termica.png')">Comprar</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <a href="#" class="img-wrap">
+                <img src="fotos/fotos png/ssd nvme.png" alt="Ssd Nvme">
+            </a>
+            <div class="info-wrap">
+                <a href="#" class="title">Ssd Nvme</a><br><br>
+                <span class="price">R$ 119.99</span>
+                <div class="bottom-wrap">
+                    <button
+                        onclick="adicionarAoCarrinho('Ssd Nvme', 119.99, 'fotos/fotos png/ssd nvme.png')">Comprar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="#" class="img-wrap">
+                <img src="fotos/fotos png/ssd sata.png" alt="Ssd Sata">
+            </a>
+            <div class="info-wrap">
+                <a href="#" class="title">Ssd Sata</a><br><br>
+                <span class="price">R$ 85.99</span>
+                <div class="bottom-wrap">
+                    <button
+                        onclick="adicionarAoCarrinho('Ssd Sata', 85.99, 'fotos/fotos png/ssd sata.png')">Comprar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="#" class="img-wrap">
+                <img src="fotos/fotos png/suporte para notebook.png" alt="Suporte Para Notebook">
+            </a>
+            <div class="info-wrap">
+                <a href="#" class="title">Suporte Para Notebook</a><br><br>
+                <span class="price">R$ 99.99</span>
+                <div class="bottom-wrap">
+                    <button
+                        onclick="adicionarAoCarrinho('Suporte Para Notebook', 99.99, 'fotos/fotos png/Suporte Para Notebook.png')">Comprar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="#" class="img-wrap">
+                <img src="fotos/fotos png/teclado.png" alt="Teclado Gamer">
+            </a>
+            <div class="info-wrap">
+                <a href="#" class="title">Teclado Gamer</a><br><br>
+                <span class="price">R$ 99.99</span>
+                <div class="bottom-wrap">
+                    <button
+                        onclick="adicionarAoCarrinho('Teclado Gamer', 99.99, 'fotos/fotos png/teclado.png')">Comprar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="#" class="img-wrap">
+                <img src="fotos/fotos png/water cooler branco.png" alt="Water Cooler 360mm">
+            </a>
+            <div class="info-wrap">
+                <a href="#" class="title">Water Cooler 360mm</a><br><br>
+                <span class="price">R$ 270.00</span>
+                <div class="bottom-wrap">
+                    <button
+                        onclick="adicionarAoCarrinho('Water Cooler 360mm', 270.00, 'fotos/fotos png/water cooler branco.png')">Comprar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <a href="#" class="img-wrap">
+                <img src="fotos/fotos png/water cooler preto.png" alt="Water Cooler 240mm">
+            </a>
+            <div class="info-wrap">
+                <a href="#" class="title">Water Cooler 240mm</a><br><br>
+                <span class="price">R$ 150.00</span>
+                <div class="bottom-wrap">
+                    <button
+                        onclick="adicionarAoCarrinho('Water Cooler 240mm', 150.00, 'fotos/fotos png/water cooler preto.png')">Comprar</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
