@@ -12,4 +12,4 @@ Projeto hospedado
 
 Link1: http://technovaloja.wuaze.com/
 
-Link2: https://projetotechnova.netlify.app/
+Link2 (backup): https://projetotechnova.netlify.app/
